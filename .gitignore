@@ -1,0 +1,13 @@
+﻿# Node (React, Angular)
+**/node_modules/
+**/build/
+**/.env
+
+# Java (Spring Boot)
+**/target/
+**/*.class
+**/*.jar
+
+# OS/system files
+.DS_Store
+Thumbs.db
