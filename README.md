@@ -33,9 +33,9 @@ Users can add tasks, mark them as completed, and see the latest pending tasks. C
 
 - Add user authentication and authorization
 - Support editing and deleting tasks
--Add filtering and search for tasks
--Implement persistent user sessions and task history
--Improve UI/UX with animations and better accessibility
+- Add filtering and search for tasks
+- Implement persistent user sessions and task history
+- Improve UI/UX with animations and better accessibility
 
 ---
 
