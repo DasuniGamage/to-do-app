@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import { TextField, Button, Typography, Stack, Box } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
+import React, { useState } from "react";
+import { TextField, Button, Typography, Stack, Box } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 
 const TaskForm = ({ onAddTask }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleSubmit = () => {
     if (title.trim()) {
       onAddTask({ title, description });
-      setTitle('');
-      setDescription('');
+      setTitle("");
+      setDescription("");
     }
   };
 
   const textFieldStyles = {
-    '& .MuiOutlinedInput-root': {
-      color: 'white',
-      '& fieldset': {
-        borderColor: 'white',
+    "& .MuiOutlinedInput-root": {
+      color: "white",
+      "& fieldset": {
+        borderColor: "white",
       },
-      '&:hover fieldset': {
-        borderColor: 'white',
+      "&:hover fieldset": {
+        borderColor: "white",
       },
-      '&.Mui-focused fieldset': {
-        borderColor: 'white',
+      "&.Mui-focused fieldset": {
+        borderColor: "white",
       },
     },
   };
@@ -42,11 +42,11 @@ const TaskForm = ({ onAddTask }) => {
         variant="outlined"
         fullWidth
         InputProps={{
-          style: { color: 'white' },
+          style: { color: "white" },
         }}
         slotProps={{
           inputLabel: {
-            style: { color: 'white' },
+            style: { color: "white" },
           },
         }}
         sx={textFieldStyles}
@@ -62,31 +62,31 @@ const TaskForm = ({ onAddTask }) => {
         fullWidth
         slotProps={{
           inputLabel: {
-            style: { color: 'white' },
+            style: { color: "white" },
           },
         }}
         sx={textFieldStyles}
       />
 
-      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
+      <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
         <Button
-            variant="contained"
-            startIcon={<AddIcon />}
-            onClick={handleSubmit}
-            sx={{
-                bgcolor: 'white',
-                color: 'black',
-                py: 2,
-                minWidth: 300,
-                '&:hover': {
-                bgcolor: '#4caf50',
-                color: '#fbf9f9',
-                },
-        }}
+          variant="contained"
+          startIcon={<AddIcon />}
+          onClick={handleSubmit}
+          sx={{
+            bgcolor: "white",
+            color: "black",
+            py: 2,
+            minWidth: 300,
+            "&:hover": {
+              bgcolor: "#4caf50",
+              color: "#fbf9f9",
+            },
+          }}
         >
-        Add Task
+          Add Task
         </Button>
-    </Box>
+      </Box>
     </Stack>
   );
 };
