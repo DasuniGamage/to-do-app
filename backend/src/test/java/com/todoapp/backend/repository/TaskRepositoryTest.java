@@ -16,13 +16,19 @@ class TaskRepositoryTest {
     private TaskRepository taskRepository;
 
     @Test
-    void findTop5ByOrderByCreatedAtDesc_ShouldReturnLatestTasks(){
+    void findTop5ByCompletedFalseOrderByCreatedAtDesc_ShouldReturnLatestUncompletedTasks(){
+        // Save 10 tasks: 5 completed, 5 uncompleted
         for(int i=0; i<10 ; i++){
+            boolean completed = i < 5; // first 5 are completed
             Task t = new Task(null,"T"+i, "D"+i , false, LocalDateTime.now().minusMinutes(i));
             taskRepository.save(t);
         }
-        List<Task> tasks = taskRepository.findTop5ByOrderByCreatedAtDesc();
+        List<Task> tasks = taskRepository.findTop5ByCompletedFalseOrderByCreatedAtDesc();
         assertEquals(5, tasks.size());
+        // Check that all are uncompleted
+        assertTrue(tasks.stream().allMatch(t -> !t.isCompleted()));
+
+        // Check that the first task is newer than the last
         assertTrue(tasks.get(0).getCreatedAt().isAfter(tasks.get(4).getCreatedAt()));
     }
 }

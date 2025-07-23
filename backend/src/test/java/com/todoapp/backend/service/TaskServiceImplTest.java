@@ -53,7 +53,7 @@ class TaskServiceImplTest {
     @Test
     void getLatestFiveTasks_ShouldReturnList() {
         List<Task> tasks = List.of(new Task(1L, "T", "D", false, LocalDateTime.now()));
-        when(taskRepository.findTop5ByOrderByCreatedAtDesc()).thenReturn(tasks);
+        when(taskRepository.findTop5ByCompletedFalseOrderByCreatedAtDesc()).thenReturn(tasks);
         when(mapper.entityToDto(any())).thenReturn(new TaskDto(1L, "T", "D", false, LocalDateTime.now()));
 
         List<TaskDto> result = service.getLatestFiveTasks();

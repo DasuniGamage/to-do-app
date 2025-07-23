@@ -33,7 +33,7 @@ public class TaskServiceIMPL implements TaskService {
 
     @Override
     public List<TaskDto> getLatestFiveTasks() {
-        return taskRepository.findTop5ByOrderByCreatedAtDesc()
+        return taskRepository.findTop5ByCompletedFalseOrderByCreatedAtDesc()
                 .stream()
                 .map(taskDtoMapper::entityToDto)
                 .toList();

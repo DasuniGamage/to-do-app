@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface TaskRepository extends JpaRepository<Task,Long> {
     List<Task>findTop5ByOrderByCreatedAtDesc();
+    List<Task> findTop5ByCompletedFalseOrderByCreatedAtDesc();
 }
