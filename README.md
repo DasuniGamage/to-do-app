@@ -25,3 +25,19 @@ Users can add tasks, mark them as completed, and see the latest pending tasks. C
 - Testing: Vitest, Jest DOM, React Testing Library, JUnit & Mockito (backend)
 
 ---
+## Getting Started
+
+---
+
+## Future Improvements
+
+- Add user authentication and authorization
+- Support editing and deleting tasks
+-Add filtering and search for tasks
+-Implement persistent user sessions and task history
+-Improve UI/UX with animations and better accessibility
+
+---
+
+## Contact
+For any questions or suggestions, feel free to open an issue or contact dasuninirmani@gmail.com.
