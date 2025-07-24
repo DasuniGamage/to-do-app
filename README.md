@@ -34,6 +34,17 @@ Follow these steps to run the To-Do Task Web App using Docker only:
 git clone https://github.com/DasuniGamage/to-do-app.git
 cd to-do-app
 ```
+
+### Create a .env File
+
+In the root of the project, create a .env file with the following content:
+ ```bash
+POSTGRES_USER=myuser
+POSTGRES_PASSWORD=mypassword
+POSTGRES_DB=mydb
+```
+Note: This file stores sensitive DB credentials and is excluded from Git tracking via .gitignore.
+
 ### Build and Start All Services
 
 ```bash
