@@ -27,6 +27,30 @@ Users can add tasks, mark them as completed, and see the latest pending tasks. C
 ---
 ## Getting Started
 
+Follow these steps to run the To-Do Task Web App using Docker only:
+### Clone the Repository
+
+```bash
+git clone https://github.com/DasuniGamage/to-do-app.git
+cd to-do-app
+```
+### Build and Start All Services
+
+```bash
+docker-compose up --build
+```
+This will:
+
+- Set up a PostgreSQL database
+- Build and run the Spring Boot backend
+- Build and serve the React frontend
+
+### Access the App
+
+Once all containers are running, open:
+- Frontend: http://localhost:3000
+- Backend API (for testing): http://localhost:8080/api/tasks/latest
+
 ---
 
 ## Future Improvements
