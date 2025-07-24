@@ -77,7 +77,8 @@ const TaskForm = ({ onAddTask }) => {
             bgcolor: "white",
             color: "black",
             py: 2,
-            minWidth: 300,
+            // minWidth: 300,
+            width: '50%',
             "&:hover": {
               bgcolor: "#4caf50",
               color: "#fbf9f9",
